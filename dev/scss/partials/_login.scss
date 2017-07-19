@@ -1,0 +1,39 @@
+@import '../mixins/_layout';
+
+.loginWrapper{
+	@include center(true,true);
+	position: fixed;
+	background-color: $gray-lighter;
+	box-shadow: 1px 1px 3px 0 #757575;
+	width: 350px;
+	height: 450px;
+}
+.logincontainer {
+    position: relative;
+    padding: 0px;
+    background-color: $gray-lighter;
+    padding: 0px 20px 20px 20px;
+}
+.loginheader {
+    width: 101%;
+    height: 50px;
+    margin-bottom: 15px;
+    margin-left: -0.5%;
+    background-color: #455a64;
+}
+.logiinoptionscontainer {
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 35px;
+    padding: 6px;
+    border-top: 1px solid #757575;
+}
+.loginlink{
+	cursor: pointer;
+	&:hover{
+		text-decoration: underline;
+	}
+}

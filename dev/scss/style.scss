@@ -1,0 +1,134 @@
+$themeName:'paper';
+
+
+//LAYOUT CONFIG//
+	$headerHeight: 8vh;
+	$subheaderHeight: 0vh;
+	$footerHeight: 5vh;
+	$contentHeight: 100vh - $headerHeight - $subheaderHeight - $footerHeight;
+
+//IMPORTS//
+	$bootstrap-sass-asset-helper: true;
+	@import '../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css';//React Bootstrap Table CSS
+
+
+//Bootstrap Theme Imports	
+	@import '../../node_modules/react-bootstrap-theme-switcher/themes/flatly/_variables.scss';
+	@import "../../node_modules//bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+	@import '../../node_modules/react-bootstrap-theme-switcher/themes/flatly/_bootswatch.scss';
+	
+//Partial SCSS Files Imports
+	@import 'partials/_header';// header of course
+	@import 'partials/_grid';//Generic for creating columns
+	@import 'partials/_buttons';//Generic for buttons
+	@import 'partials/_formControl';//Generic form elements
+	@import 'partials/_listElement';//Style for row of full width list
+	@import 'partials/_content';//Generic Layout including the content container 
+	@import 'partials/_login';//Login Page Styles
+	@import 'partials/_footer';
+	//@import 'partials/_sidebar';//
+	@import 'partials/_settings';//Style for all settings tabs
+	@import 'partials/_mNotation';
+
+//Mixins Import
+	@import './mixins/_layout';//Importing Mixin for centering
+	@import './mixins/_createButton';
+
+
+	
+	//@import '../../node_modules/react-datepicker/dist/react-datepicker.css';
+	//@import '../../node_modules/griddle-react-bootstrap/dist/griddle-react-bootstrap.css';//Griddle Bootstrap CSS
+	
+
+//Overriding react-bootstrap-table wrapping
+.react-bs-table table td,
+.react-bs-table table th {
+  white-space: normal !important;
+}
+
+//ELEMENTS//
+	body{
+		margin: 0 1px 0 1px;
+		background-color: $brand-primary;
+	}
+
+//LAYOUT CLASSES //
+	.pullLeft{
+		float: left;
+	}
+	.pullRight{
+		float: right;
+	}
+	.parent {
+	  position: relative;
+	}
+	.child {
+
+	  &.both {
+	    @include center;
+	  }
+
+	  &.horizontal {
+	    @include center(true, false);
+	  }
+
+	  &.vertical {
+	    @include center(false, true);
+	  }
+	}
+	.boxSizing{
+		box-sizing:border-box;
+	}
+	.fullWidth{
+		width:100%;
+	}
+	.noMargins{
+		margin: 0 0 0 0;
+	}
+	.elementCenter{
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.centerAll{
+		@include center(true,true);
+	}
+
+
+//TEXT STYLING CLASSES //
+	.largeText{
+		font-size: 18px;
+	}
+	.smallText{
+		font-size: 14px;
+	}
+	.xsText{
+		font-size: 12px;
+	}
+	.spaceLetters1{
+		letter-spacing: 1px;
+	}
+	.allCaps{
+		text-transform: uppercase;
+	}
+	.bold{
+		
+		font-weight: bold;
+	}
+	.whiteText{
+		color:white;
+	}
+	.noFancyLink{
+		&:hover{
+			text-decoration: none;
+		}
+	}
+
+
+
+// Background Classes
+.bg-truck{
+	linear-gradient:180deg, rgba(207, 216, 220, .53), rgba(207, 216, 220, .53);
+	background-image: url(http://uploads.webflow.com/5939c71a24f8d7543342a16f/593ae5e76712c516fd9239bf_LoadTrack_yellowTRuck.jpg);
+
+}
+

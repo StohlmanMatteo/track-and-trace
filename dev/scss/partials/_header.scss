@@ -1,0 +1,84 @@
+@import '../mixins/createDropdownMenu';
+
+.header{
+	background-color: $brand-primary;
+	height: $headerHeight;
+	//overflow: hidden;
+	position: fixed;
+	width:100%;
+
+}
+.headerHeading{
+	margin: 0 auto 0 auto;
+	line-height: $headerHeight;
+	position: relative;
+	padding: 0 0 0 0;
+}
+.headerSection{
+	height: 100%;
+	text-align: center;
+}
+.headerTitle{
+	@extend .headerHeading;
+	color:#bac1c2;
+	text-align: left;
+	padding-left: 10px;
+}
+.headerCompany{
+	@extend .headerHeading;
+	color: white;
+}
+.headerHeight{
+	height:$headerHeight;
+}
+
+.headerDropdown{
+	position: fixed !important;
+	text-align: center;
+	width: 160px;
+	top: 0px;
+	right:0px;
+	li{
+		a {
+				//color: white;
+				height: 100%;
+			}
+	}
+	ul li {
+			height: 35px;
+			a{
+				padding: 0px 0px 0px 10px !important;
+				line-height: 35px;
+				//color: black;
+			}
+
+	}
+
+		
+	a{
+		padding: 0px 0px 0px 0px !important;
+	}
+	z-index: 10;
+	line-height: $headerHeight;
+	padding: 0px 0px 0px 0px !important;
+	box-sizing:border-box;
+}
+.headerButton{
+	margin-top: 14px;
+	margin-right: 20px;
+}
+
+.loginButton{
+	margin-top: 7px;
+}
+// .nav .open>a {
+// 	background-color: $brand-success !important;
+// }
+// .nav>li>a:hover, .nav>li>a:focus{
+// 	background-color: $brand-success !important;
+// }
+// .dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus{
+// 	background-color: $brand-success !important;
+// }
+
+

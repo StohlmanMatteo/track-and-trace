@@ -1,0 +1,35 @@
+.footerContainer{
+	height: $footerHeight;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+    background-color: $brand-primary;
+}
+.addFb{
+	position: absolute;
+    right: 80px;
+    bottom: 5px;
+    width: 7vh;
+    height: 7vh;
+    background-image: url(http://uploads.webflow.com/5939c71a24f8d7543342a16f/593cb49fd46a1d72cdafb71c_white_on_green_plus_mobile.png);
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.uploadButton{
+	position: fixed;
+    right: 5px;
+    bottom: 5px;
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50px;
+    background-image: url(http://uploads.webflow.com/5939c71a24f8d7543342a16f/593be841aca52779f2752944_arrow.svg);
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.footerlogo{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+}

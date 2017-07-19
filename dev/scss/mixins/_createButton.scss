@@ -1,0 +1,14 @@
+@mixin createButton($width, $height){
+    width: $width;
+    height: $height;
+    border-radius: 5px;
+    //background-color: #d9534f;
+    box-shadow: 0 0 4px 0 #212121;
+    //color: #fff;
+    line-height: $height;
+    //font-weight: 700;
+    text-align: center;
+    padding: 0 0 0 0;
+    //letter-spacing: 3px;
+    //text-transform: uppercase;
+}

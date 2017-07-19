@@ -117,32 +117,48 @@ class SettingsDialog extends Component{
 	handleSelect(key){
 		console.log(key);
 		this.setState((prevState, props) => {
-			              return {type: key};
+			              return {type: nextProps.type};
 			            });
 	}
 	renderTabContainer(activeKey){
 		console.log("TabContRender: ",activeKey);
 		return(
-			  <Tab.Container id="left-tabs-example" onSelect={this.handleSelect.bind(this)} activeKey={this.props.type}>
+			  <Tab.Container id="left-tabs-example" activeKey={activeKey} >
 			    <Row className="clearfix">
 			      
 			      <Col sm={2}>
 			        <Nav bsStyle="pills" stacked>
-			          <NavItem eventKey="personalInfo">
-			            Personal Info
-			          </NavItem>
-			          <NavItem eventKey="changePassword">
-			            Change Password
-			          </NavItem>
-			          <NavItem eventKey="inviteUser">
-			            Invite Users
-			          </NavItem>
-			          <NavItem eventKey="notificationSettings">
-			            Notification Settings
-			          </NavItem>
-			          <NavItem eventKey="upload">
-			            Upload
-			          </NavItem>
+			          
+			          <LinkContainer to='/account/personalInfo'>
+			          	<NavItem eventKey="personalInfo">
+			            	Personal Info
+			          	</NavItem>
+			          </LinkContainer>
+
+			          <LinkContainer to='/account/changePassword'>
+				          <NavItem eventKey="changePassword">
+				            Change Password
+				          </NavItem>
+				      </LinkContainer>
+
+					  <LinkContainer to='/account/inviteUser'>
+			          	<NavItem eventKey="inviteUser">
+			          	  Invite Users
+			          	</NavItem>
+			          </LinkContainer>
+
+					  <LinkContainer to='/account/notificationSettings'>
+			          	<NavItem eventKey="notificationSettings">
+			          	  Notification Settings
+			          	</NavItem>
+			          </LinkContainer>
+
+					  <LinkContainer to='/account/upload'>
+			          	<NavItem eventKey="upload">
+			          	  Upload
+			          	</NavItem>
+			          </LinkContainer>
+
 			        </Nav>
 			      </Col>
 			      

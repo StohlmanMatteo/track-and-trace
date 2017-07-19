@@ -1,0 +1,8 @@
+@import '../mixins/_gridSystem';
+
+.cols-3 div{
+	@include grid(3,2%);
+}
+.cols-2 div{
+	@include grid(2,0%);
+}

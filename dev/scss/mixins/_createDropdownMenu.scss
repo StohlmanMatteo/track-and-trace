@@ -1,0 +1,66 @@
+// Sort of based on http://matthewjamestaylor.com/blog/centered-dropdown-menus
+// but with centering elements removed.
+$hover-color:gray;
+@mixin createDropdownMenu($z-index, $width) {
+
+  //clear: both;
+  //float: left;
+  margin: 0 0 0 0  !important;
+  padding: 0 !important;
+  width: $width !important;
+  z-index: $z-index;
+  position: relative;
+  text-align: center !important;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    //float: right;
+    position: relative;
+    li {
+      margin: 0 0 0 0px;
+      //padding: 0;
+      //float: left;
+      position: relative;
+      top: 1px;
+      a {
+        display: block;
+        margin: 0;
+        //padding: .6em .5em .4em;
+      }
+      &:last-child ul {
+        left: auto;
+        right: 0;
+        text-align: center;
+      }
+      &:hover ul { display: block; }
+    }
+    ul {
+      display: none;
+      position: absolute;
+      top: 48px;
+      left: 0;
+      right: auto;
+      width: $width;
+      li {
+        left: auto;
+        margin: 0;
+        clear: left;
+        width: $width;
+        background-color: $primary;
+        text-align: center;
+        a, &:hover ul li a {
+          //background: #eee;
+          color: white;
+          //line-height: 1.4em;
+        }
+        a:hover, &:hover ul li a:hover {
+          background: white;
+          color: $hover-color;
+        }
+      }
+    }
+  }
+
+}
